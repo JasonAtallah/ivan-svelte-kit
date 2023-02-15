@@ -7,13 +7,13 @@ export async function load({ params: { ticker } }: { params: { ticker?: string }
 
 	const yahoo = new Yahoo(ticker);
 	const currentValue = await yahoo.getCurrentValue();
-	const intrinsicValue = await yahoo.getIntrinsicValue();
 	const marginOfSafety = await yahoo.getMarginOfSafety();
+	const intrinsicValue = await yahoo.getIntrinsicValue();
 
 	return {
 		ticker,
 		currentValue,
-		intrinsicValue,
-		marginOfSafety
+		marginOfSafety,
+		intrinsicValue
 	};
 }
