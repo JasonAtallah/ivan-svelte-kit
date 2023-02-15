@@ -7,7 +7,8 @@
 
 <div class="min-w-screen min-h-screen flex flex-col bg-gray-200 items-center">
 	<Navbar />
-	<div class="p-8">
+
+	<div class="m-8">
 		{#if $navigating}
 			<Loader />
 		{:else}
