@@ -17,7 +17,7 @@ export class Yahoo {
 		return headers;
 	}
 	constructor(ticker: string) {
-		this.ticker = ticker;
+		this.ticker = ticker.trim();
 		this.apiKey = API_KEY;
 	}
 
