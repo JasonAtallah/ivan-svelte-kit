@@ -11,5 +11,10 @@
 	<span><b>Current Value: </b>{data.currentValue}</span>
 	<span><b>Intrinsic Value: </b>{data.intrinsicValue}</span>
 	<span><b>Margin of Safety: </b>{data.marginOfSafety}</span>
+	<span><b>Earnings / Share: </b>{data.earningsPerShare}</span>
+	<span><b>Book Value / Share: </b>{data.bookValuePerShare}</span>
+	<span><b>Total Stockholder Equity: </b>{data.totalStockerholderEquity.toLocaleString()}</span>
+	<span><b>Common Shares Outstanding: </b>{data.commonSharesOutstanding.toLocaleString()}</span>
+
 	<Button onClick={() => goto('/')}>Back</Button>
 </div>

@@ -46,7 +46,7 @@ export class Yahoo {
 		const totalStockerholderEquity = await this.getTotalStockholderEquity();
 		const commonSharesOutstanding = await this.getCommonSharesOutstanding();
 		const bvps = totalStockerholderEquity / commonSharesOutstanding;
-		return bvps;
+		return this.toTwoDecimalPlaces(bvps);
 	}
 
 	async getCommonSharesOutstanding() {

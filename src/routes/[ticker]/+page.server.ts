@@ -9,11 +9,19 @@ export async function load({ params: { ticker } }: { params: { ticker?: string }
 	const currentValue = await yahoo.getCurrentValue();
 	const intrinsicValue = await yahoo.getIntrinsicValue();
 	const marginOfSafety = await yahoo.getMarginOfSafety();
+	const earningsPerShare = await yahoo.getEarningsPerShare();
+	const bookValuePerShare = await yahoo.getBookValuePerShare();
+	const totalStockerholderEquity = await yahoo.getTotalStockholderEquity();
+	const commonSharesOutstanding = await yahoo.getCommonSharesOutstanding();
 
 	return {
 		ticker,
 		currentValue,
 		intrinsicValue,
-		marginOfSafety
+		marginOfSafety,
+		earningsPerShare,
+		bookValuePerShare,
+		totalStockerholderEquity,
+		commonSharesOutstanding
 	};
 }
